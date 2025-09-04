@@ -23,8 +23,7 @@
 
     function ChatMessage(props) {
 
-        const message = props.message;
-        const sender = props.sender;
+       const { message, sender } = props;
 
         if (sender === 'robot') {
           return (
