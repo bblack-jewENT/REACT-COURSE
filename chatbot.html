@@ -21,18 +21,25 @@
         );
     }
 
-    function ChatMessage() {
+    function ChatMessage(props) {
+
+        const message = props.message;
+
         return (
-            <>
-                hello Chatbot
-                <img />
-            </>
+            <div>
+                {message}
+                <img src="user.png" width="50px" />
+                
+            </div>
         )
     }
 
       const app = (
         <>
           <ChatInput />
+          <ChatMessage message="hello Chatbot" />
+          <ChatMessage message="hello! How can i help you ?" />
+          <ChatMessage message="can i get todays date?" />
         </>
       );
 
