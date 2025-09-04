@@ -56,8 +56,9 @@
         )
     }
 
-      const app = (
-        <>
+    function App() {
+      return (
+         <>
           <ChatInput />
           <ChatMessage 
             message="hello Chatbot"  sender="user" 
@@ -84,9 +85,10 @@
           />
         </>
       );
+    }
 
       const container = document.querySelector('.js-container');
-      ReactDOM.createRoot(container).render(app);
+      ReactDOM.createRoot(container).render(<App />);
     </script>
   </body>
 </html>
