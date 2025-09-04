@@ -15,7 +15,9 @@
     function ChatInput() {
         return (
             <>
-                <input placeholder="Send a message to Chatbot" size="30" />
+                <input 
+                  placeholder="Send a message to Chatbot" size="30" 
+                />
                 <button>Send</button>
             </>
         );
@@ -40,9 +42,15 @@
 
         return (
             <div>
-                {sender === 'robot' && <img src="robot.png" width="50px" />}
+                {sender === 'robot' && (
+                  <img src="robot.png" width="50px" />
+                )}
+                
                 {message}
-                {sender === 'user' && <img src="user.png" width="50px" />}
+
+                {sender === 'user' && (
+                  <img src="user.png" width="50px" />
+                )}
                 
             </div>
         )
