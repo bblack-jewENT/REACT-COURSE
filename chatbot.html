@@ -89,29 +89,7 @@
       return (
          <>
           <ChatInput />
-          <ChatMessage 
-            message="hello Chatbot"  sender="user" 
-          />
-          <ChatMessage 
-            message="hello! How can i help you ?" 
-            sender="robot" 
-          />
-          <ChatMessage 
-            message="can i get todays date?" 
-            sender="user" 
-          />
-          <ChatMessage 
-            message="Today is September 4" 
-            sender="robot" 
-          />
-          <ChatMessage 
-            message="how about flip a coin" 
-            sender="user" 
-          />
-          <ChatMessage 
-            message="Sure! You got head" 
-            sender="robot" 
-          />
+           {chatMessageComponents}
         </>
       );
     }
