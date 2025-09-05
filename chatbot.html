@@ -56,47 +56,56 @@
         )
     }
 
-      const chatMessages = [{
-        message: 'hello Chatbot',
-        sender: 'user',
-        id: 'id1'
-      }, {
-        message: 'hello! How can i help you ?',
-        sender: 'robot',
-        id: 'id2'
-      }, {
-        message: 'can i get todays date?',
-        sender: 'user',
-        id: 'id3'
-      }, {
-        message: 'Today is September 4',
-        sender: 'robot',
-        id: 'id4'
-      }, {
-        message: 'how about flip a coin',
-        sender: 'user',
-        id: 'id5'
-      }, {
-        message: 'Sure! You got head',
-        sender: 'robot',
-        id: 'id6'
-      }];
+      function ChatMessages() {
+           const chatMessages = [{
+          message: 'hello Chatbot',
+          sender: 'user',
+          id: 'id1'
+        }, {
+          message: 'hello! How can i help you ?',
+          sender: 'robot',
+          id: 'id2'
+        }, {
+          message: 'can i get todays date?',
+          sender: 'user',
+          id: 'id3'
+        }, {
+          message: 'Today is September 4',
+          sender: 'robot',
+          id: 'id4'
+        }, {
+          message: 'how about flip a coin',
+          sender: 'user',
+          id: 'id5'
+        }, {
+          message: 'Sure! You got head',
+          sender: 'robot',
+          id: 'id6'
+        }];
+
+        return (
+          <>
+            {chatMessages.map((chatMessage) => {
+                  return (
+                    <ChatMessage 
+                      message={chatMessage.message}
+                      sender={chatMessage.sender}
+                      key={chatMessage.id}
+                    />
+                  );
+                })
+               }
+          </>
+        );
+      }
+
 
       
     function App() {
       return (
          <>
           <ChatInput />
-           {chatMessages.map((chatMessage) => {
-              return (
-                <ChatMessage 
-                  message={chatMessage.message}
-                  sender={chatMessage.sender}
-                  key={chatMessage.id}
-                />
-              );
-            })
-           }
+           
         </>
       );
     }
