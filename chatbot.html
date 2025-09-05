@@ -81,14 +81,13 @@
       return (
          <>
           <ChatInput />
-           {
-             chatMessages.map((chatMessage) => {
-                return (
-                  <ChatMessage 
-                    message={chatMessage.message}
-                    sender={chatMessage.sender}  
-                  />
-                );
+           {chatMessages.map((chatMessage) => {
+              return (
+                <ChatMessage 
+                  message={chatMessage.message}
+                  sender={chatMessage.sender}  
+                />
+              );
             })
            }
         </>
